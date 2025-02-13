@@ -1,7 +1,6 @@
 import 'package:architecture_tdd/core/usecases/usecase.dart';
 import 'package:architecture_tdd/features/number_trivia/domain/entity/number_trivia.dart';
 import 'package:architecture_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart';
-import 'package:architecture_tdd/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:architecture_tdd/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mockito/annotations.dart';
