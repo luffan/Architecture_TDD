@@ -25,13 +25,13 @@ import 'package:mockito/mockito.dart' as _i1;
 
 class _FakeDuration_0 extends _i1.SmartFake implements Duration {
   _FakeDuration_0(Object parent, Invocation parentInvocation)
-      : super(parent, parentInvocation);
+    : super(parent, parentInvocation);
 }
 
 class _FakeAddressCheckResult_1 extends _i1.SmartFake
     implements _i2.AddressCheckResult {
   _FakeAddressCheckResult_1(Object parent, Invocation parentInvocation)
-      : super(parent, parentInvocation);
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [InternetConnectionChecker].
@@ -40,11 +40,13 @@ class _FakeAddressCheckResult_1 extends _i1.SmartFake
 class MockInternetConnectionChecker extends _i1.Mock
     implements _i2.InternetConnectionChecker {
   @override
-  bool get requireAllAddressesToRespond => (super.noSuchMethod(
-        Invocation.getter(#requireAllAddressesToRespond),
-        returnValue: false,
-        returnValueForMissingStub: false,
-      ) as bool);
+  bool get requireAllAddressesToRespond =>
+      (super.noSuchMethod(
+            Invocation.getter(#requireAllAddressesToRespond),
+            returnValue: false,
+            returnValueForMissingStub: false,
+          )
+          as bool);
 
   @override
   set requireAllAddressesToRespond(bool? _requireAllAddressesToRespond) =>
@@ -57,11 +59,13 @@ class MockInternetConnectionChecker extends _i1.Mock
       );
 
   @override
-  bool get enableToCheckForSlowConnection => (super.noSuchMethod(
-        Invocation.getter(#enableToCheckForSlowConnection),
-        returnValue: false,
-        returnValueForMissingStub: false,
-      ) as bool);
+  bool get enableToCheckForSlowConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#enableToCheckForSlowConnection),
+            returnValue: false,
+            returnValueForMissingStub: false,
+          )
+          as bool);
 
   @override
   set enableToCheckForSlowConnection(bool? _enableToCheckForSlowConnection) =>
@@ -74,17 +78,19 @@ class MockInternetConnectionChecker extends _i1.Mock
       );
 
   @override
-  Duration get slowConnectionThreshold => (super.noSuchMethod(
-        Invocation.getter(#slowConnectionThreshold),
-        returnValue: _FakeDuration_0(
-          this,
-          Invocation.getter(#slowConnectionThreshold),
-        ),
-        returnValueForMissingStub: _FakeDuration_0(
-          this,
-          Invocation.getter(#slowConnectionThreshold),
-        ),
-      ) as Duration);
+  Duration get slowConnectionThreshold =>
+      (super.noSuchMethod(
+            Invocation.getter(#slowConnectionThreshold),
+            returnValue: _FakeDuration_0(
+              this,
+              Invocation.getter(#slowConnectionThreshold),
+            ),
+            returnValueForMissingStub: _FakeDuration_0(
+              this,
+              Invocation.getter(#slowConnectionThreshold),
+            ),
+          )
+          as Duration);
 
   @override
   set slowConnectionThreshold(Duration? _slowConnectionThreshold) =>
@@ -94,140 +100,156 @@ class MockInternetConnectionChecker extends _i1.Mock
       );
 
   @override
-  Duration get checkTimeout => (super.noSuchMethod(
-        Invocation.getter(#checkTimeout),
-        returnValue: _FakeDuration_0(
-          this,
-          Invocation.getter(#checkTimeout),
-        ),
-        returnValueForMissingStub: _FakeDuration_0(
-          this,
-          Invocation.getter(#checkTimeout),
-        ),
-      ) as Duration);
+  Duration get checkTimeout =>
+      (super.noSuchMethod(
+            Invocation.getter(#checkTimeout),
+            returnValue: _FakeDuration_0(
+              this,
+              Invocation.getter(#checkTimeout),
+            ),
+            returnValueForMissingStub: _FakeDuration_0(
+              this,
+              Invocation.getter(#checkTimeout),
+            ),
+          )
+          as Duration);
 
   @override
   set checkTimeout(Duration? _checkTimeout) => super.noSuchMethod(
-        Invocation.setter(#checkTimeout, _checkTimeout),
-        returnValueForMissingStub: null,
-      );
+    Invocation.setter(#checkTimeout, _checkTimeout),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  Duration get checkInterval => (super.noSuchMethod(
-        Invocation.getter(#checkInterval),
-        returnValue: _FakeDuration_0(
-          this,
-          Invocation.getter(#checkInterval),
-        ),
-        returnValueForMissingStub: _FakeDuration_0(
-          this,
-          Invocation.getter(#checkInterval),
-        ),
-      ) as Duration);
+  Duration get checkInterval =>
+      (super.noSuchMethod(
+            Invocation.getter(#checkInterval),
+            returnValue: _FakeDuration_0(
+              this,
+              Invocation.getter(#checkInterval),
+            ),
+            returnValueForMissingStub: _FakeDuration_0(
+              this,
+              Invocation.getter(#checkInterval),
+            ),
+          )
+          as Duration);
 
   @override
   set checkInterval(Duration? _checkInterval) => super.noSuchMethod(
-        Invocation.setter(#checkInterval, _checkInterval),
-        returnValueForMissingStub: null,
-      );
+    Invocation.setter(#checkInterval, _checkInterval),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  List<_i2.AddressCheckOption> get addresses => (super.noSuchMethod(
-        Invocation.getter(#addresses),
-        returnValue: <_i2.AddressCheckOption>[],
-        returnValueForMissingStub: <_i2.AddressCheckOption>[],
-      ) as List<_i2.AddressCheckOption>);
+  List<_i2.AddressCheckOption> get addresses =>
+      (super.noSuchMethod(
+            Invocation.getter(#addresses),
+            returnValue: <_i2.AddressCheckOption>[],
+            returnValueForMissingStub: <_i2.AddressCheckOption>[],
+          )
+          as List<_i2.AddressCheckOption>);
 
   @override
   set addresses(List<_i2.AddressCheckOption>? value) => super.noSuchMethod(
-        Invocation.setter(#addresses, value),
-        returnValueForMissingStub: null,
-      );
+    Invocation.setter(#addresses, value),
+    returnValueForMissingStub: null,
+  );
 
   @override
   _i3.Stream<_i2.InternetConnectionStatus> get onStatusChange =>
       (super.noSuchMethod(
-        Invocation.getter(#onStatusChange),
-        returnValue: _i3.Stream<_i2.InternetConnectionStatus>.empty(),
-        returnValueForMissingStub:
-            _i3.Stream<_i2.InternetConnectionStatus>.empty(),
-      ) as _i3.Stream<_i2.InternetConnectionStatus>);
+            Invocation.getter(#onStatusChange),
+            returnValue: _i3.Stream<_i2.InternetConnectionStatus>.empty(),
+            returnValueForMissingStub:
+                _i3.Stream<_i2.InternetConnectionStatus>.empty(),
+          )
+          as _i3.Stream<_i2.InternetConnectionStatus>);
 
   @override
-  bool get hasListeners => (super.noSuchMethod(
-        Invocation.getter(#hasListeners),
-        returnValue: false,
-        returnValueForMissingStub: false,
-      ) as bool);
+  bool get hasListeners =>
+      (super.noSuchMethod(
+            Invocation.getter(#hasListeners),
+            returnValue: false,
+            returnValueForMissingStub: false,
+          )
+          as bool);
 
   @override
-  _i3.Future<bool> get hasConnection => (super.noSuchMethod(
-        Invocation.getter(#hasConnection),
-        returnValue: _i3.Future<bool>.value(false),
-        returnValueForMissingStub: _i3.Future<bool>.value(false),
-      ) as _i3.Future<bool>);
+  _i3.Future<bool> get hasConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#hasConnection),
+            returnValue: _i3.Future<bool>.value(false),
+            returnValueForMissingStub: _i3.Future<bool>.value(false),
+          )
+          as _i3.Future<bool>);
 
   @override
   _i3.Future<_i2.InternetConnectionStatus> get connectionStatus =>
       (super.noSuchMethod(
-        Invocation.getter(#connectionStatus),
-        returnValue: _i3.Future<_i2.InternetConnectionStatus>.value(
-          _i2.InternetConnectionStatus.connected,
-        ),
-        returnValueForMissingStub:
-            _i3.Future<_i2.InternetConnectionStatus>.value(
-          _i2.InternetConnectionStatus.connected,
-        ),
-      ) as _i3.Future<_i2.InternetConnectionStatus>);
+            Invocation.getter(#connectionStatus),
+            returnValue: _i3.Future<_i2.InternetConnectionStatus>.value(
+              _i2.InternetConnectionStatus.connected,
+            ),
+            returnValueForMissingStub:
+                _i3.Future<_i2.InternetConnectionStatus>.value(
+                  _i2.InternetConnectionStatus.connected,
+                ),
+          )
+          as _i3.Future<_i2.InternetConnectionStatus>);
 
   @override
   set setLastStatus(_i2.InternetConnectionStatus? status) => super.noSuchMethod(
-        Invocation.setter(#setLastStatus, status),
-        returnValueForMissingStub: null,
-      );
+    Invocation.setter(#setLastStatus, status),
+    returnValueForMissingStub: null,
+  );
 
   @override
   set setRequireAllAddressesToRespond(bool? value) => super.noSuchMethod(
-        Invocation.setter(#setRequireAllAddressesToRespond, value),
-        returnValueForMissingStub: null,
-      );
+    Invocation.setter(#setRequireAllAddressesToRespond, value),
+    returnValueForMissingStub: null,
+  );
 
   @override
   Iterable<_i3.Future<_i2.AddressCheckResult>> createAddressCheckFutures(
     List<_i2.AddressCheckOption>? addresses,
   ) =>
       (super.noSuchMethod(
-        Invocation.method(#createAddressCheckFutures, [addresses]),
-        returnValue: <_i3.Future<_i2.AddressCheckResult>>[],
-        returnValueForMissingStub: <_i3.Future<_i2.AddressCheckResult>>[],
-      ) as Iterable<_i3.Future<_i2.AddressCheckResult>>);
+            Invocation.method(#createAddressCheckFutures, [addresses]),
+            returnValue: <_i3.Future<_i2.AddressCheckResult>>[],
+            returnValueForMissingStub: <_i3.Future<_i2.AddressCheckResult>>[],
+          )
+          as Iterable<_i3.Future<_i2.AddressCheckResult>>);
 
   @override
-  _i3.Future<bool> checkConnectivity() => (super.noSuchMethod(
-        Invocation.method(#checkConnectivity, []),
-        returnValue: _i3.Future<bool>.value(false),
-        returnValueForMissingStub: _i3.Future<bool>.value(false),
-      ) as _i3.Future<bool>);
+  _i3.Future<bool> checkConnectivity() =>
+      (super.noSuchMethod(
+            Invocation.method(#checkConnectivity, []),
+            returnValue: _i3.Future<bool>.value(false),
+            returnValueForMissingStub: _i3.Future<bool>.value(false),
+          )
+          as _i3.Future<bool>);
 
   @override
   _i3.Future<_i2.AddressCheckResult> isHostReachable(
     _i2.AddressCheckOption? option,
   ) =>
       (super.noSuchMethod(
-        Invocation.method(#isHostReachable, [option]),
-        returnValue: _i3.Future<_i2.AddressCheckResult>.value(
-          _FakeAddressCheckResult_1(
-            this,
             Invocation.method(#isHostReachable, [option]),
-          ),
-        ),
-        returnValueForMissingStub: _i3.Future<_i2.AddressCheckResult>.value(
-          _FakeAddressCheckResult_1(
-            this,
-            Invocation.method(#isHostReachable, [option]),
-          ),
-        ),
-      ) as _i3.Future<_i2.AddressCheckResult>);
+            returnValue: _i3.Future<_i2.AddressCheckResult>.value(
+              _FakeAddressCheckResult_1(
+                this,
+                Invocation.method(#isHostReachable, [option]),
+              ),
+            ),
+            returnValueForMissingStub: _i3.Future<_i2.AddressCheckResult>.value(
+              _FakeAddressCheckResult_1(
+                this,
+                Invocation.method(#isHostReachable, [option]),
+              ),
+            ),
+          )
+          as _i3.Future<_i2.AddressCheckResult>);
 
   @override
   _i3.Future<void> maybeEmitStatusUpdate({
@@ -235,13 +257,14 @@ class MockInternetConnectionChecker extends _i1.Mock
     Function? cancelCallback,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(#maybeEmitStatusUpdate, [], {
-          #timer: timer,
-          #cancelCallback: cancelCallback,
-        }),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+            Invocation.method(#maybeEmitStatusUpdate, [], {
+              #timer: timer,
+              #cancelCallback: cancelCallback,
+            }),
+            returnValue: _i3.Future<void>.value(),
+            returnValueForMissingStub: _i3.Future<void>.value(),
+          )
+          as _i3.Future<void>);
 
   @override
   void emitStatus(_i2.InternetConnectionStatus? newStatus) =>
@@ -252,15 +275,15 @@ class MockInternetConnectionChecker extends _i1.Mock
 
   @override
   void startMonitoring() => super.noSuchMethod(
-        Invocation.method(#startMonitoring, []),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#startMonitoring, []),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void cancelStatusUpdate() => super.noSuchMethod(
-        Invocation.method(#cancelStatusUpdate, []),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#cancelStatusUpdate, []),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void configure({
@@ -268,20 +291,19 @@ class MockInternetConnectionChecker extends _i1.Mock
     Duration? interval,
     List<_i2.AddressCheckOption>? addresses,
     _i2.SlowConnectionConfig? slowConnectionConfig,
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(#configure, [], {
-          #timeout: timeout,
-          #interval: interval,
-          #addresses: addresses,
-          #slowConnectionConfig: slowConnectionConfig,
-        }),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#configure, [], {
+      #timeout: timeout,
+      #interval: interval,
+      #addresses: addresses,
+      #slowConnectionConfig: slowConnectionConfig,
+    }),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void dispose() => super.noSuchMethod(
-        Invocation.method(#dispose, []),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#dispose, []),
+    returnValueForMissingStub: null,
+  );
 }

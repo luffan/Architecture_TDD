@@ -32,7 +32,7 @@ import 'package:mockito/mockito.dart' as _i1;
 class _FakeNumberTriviaModel_0 extends _i1.SmartFake
     implements _i2.NumberTriviaModel {
   _FakeNumberTriviaModel_0(Object parent, Invocation parentInvocation)
-      : super(parent, parentInvocation);
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [NumberTriviaRemoteDataSource].
@@ -43,38 +43,40 @@ class MockNumberTriviaRemoteDataSource extends _i1.Mock
   @override
   _i4.Future<_i2.NumberTriviaModel> getConcreteNumberTrivia(int? number) =>
       (super.noSuchMethod(
-        Invocation.method(#getConcreteNumberTrivia, [number]),
-        returnValue: _i4.Future<_i2.NumberTriviaModel>.value(
-          _FakeNumberTriviaModel_0(
-            this,
             Invocation.method(#getConcreteNumberTrivia, [number]),
-          ),
-        ),
-        returnValueForMissingStub: _i4.Future<_i2.NumberTriviaModel>.value(
-          _FakeNumberTriviaModel_0(
-            this,
-            Invocation.method(#getConcreteNumberTrivia, [number]),
-          ),
-        ),
-      ) as _i4.Future<_i2.NumberTriviaModel>);
+            returnValue: _i4.Future<_i2.NumberTriviaModel>.value(
+              _FakeNumberTriviaModel_0(
+                this,
+                Invocation.method(#getConcreteNumberTrivia, [number]),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<_i2.NumberTriviaModel>.value(
+              _FakeNumberTriviaModel_0(
+                this,
+                Invocation.method(#getConcreteNumberTrivia, [number]),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.NumberTriviaModel>);
 
   @override
   _i4.Future<_i2.NumberTriviaModel> getRandomNumberTrivia() =>
       (super.noSuchMethod(
-        Invocation.method(#getRandomNumberTrivia, []),
-        returnValue: _i4.Future<_i2.NumberTriviaModel>.value(
-          _FakeNumberTriviaModel_0(
-            this,
             Invocation.method(#getRandomNumberTrivia, []),
-          ),
-        ),
-        returnValueForMissingStub: _i4.Future<_i2.NumberTriviaModel>.value(
-          _FakeNumberTriviaModel_0(
-            this,
-            Invocation.method(#getRandomNumberTrivia, []),
-          ),
-        ),
-      ) as _i4.Future<_i2.NumberTriviaModel>);
+            returnValue: _i4.Future<_i2.NumberTriviaModel>.value(
+              _FakeNumberTriviaModel_0(
+                this,
+                Invocation.method(#getRandomNumberTrivia, []),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<_i2.NumberTriviaModel>.value(
+              _FakeNumberTriviaModel_0(
+                this,
+                Invocation.method(#getRandomNumberTrivia, []),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.NumberTriviaModel>);
 }
 
 /// A class which mocks [NumberTriviaLocalDataSource].
@@ -85,28 +87,30 @@ class MockNumberTriviaLocalDataSource extends _i1.Mock
   @override
   _i4.Future<_i2.NumberTriviaModel> getLastNumberTrivia() =>
       (super.noSuchMethod(
-        Invocation.method(#getLastNumberTrivia, []),
-        returnValue: _i4.Future<_i2.NumberTriviaModel>.value(
-          _FakeNumberTriviaModel_0(
-            this,
             Invocation.method(#getLastNumberTrivia, []),
-          ),
-        ),
-        returnValueForMissingStub: _i4.Future<_i2.NumberTriviaModel>.value(
-          _FakeNumberTriviaModel_0(
-            this,
-            Invocation.method(#getLastNumberTrivia, []),
-          ),
-        ),
-      ) as _i4.Future<_i2.NumberTriviaModel>);
+            returnValue: _i4.Future<_i2.NumberTriviaModel>.value(
+              _FakeNumberTriviaModel_0(
+                this,
+                Invocation.method(#getLastNumberTrivia, []),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<_i2.NumberTriviaModel>.value(
+              _FakeNumberTriviaModel_0(
+                this,
+                Invocation.method(#getLastNumberTrivia, []),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.NumberTriviaModel>);
 
   @override
   _i4.Future<void> cacheNumberTrivia(_i2.NumberTriviaModel? triviaToCache) =>
       (super.noSuchMethod(
-        Invocation.method(#cacheNumberTrivia, [triviaToCache]),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+            Invocation.method(#cacheNumberTrivia, [triviaToCache]),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
+          )
+          as _i4.Future<void>);
 }
 
 /// A class which mocks [NetworkInfo].
@@ -114,9 +118,11 @@ class MockNumberTriviaLocalDataSource extends _i1.Mock
 /// See the documentation for Mockito's code generation for more information.
 class MockNetworkInfo extends _i1.Mock implements _i6.NetworkInfo {
   @override
-  _i4.Future<bool> get isConnected => (super.noSuchMethod(
-        Invocation.getter(#isConnected),
-        returnValue: _i4.Future<bool>.value(false),
-        returnValueForMissingStub: _i4.Future<bool>.value(false),
-      ) as _i4.Future<bool>);
+  _i4.Future<bool> get isConnected =>
+      (super.noSuchMethod(
+            Invocation.getter(#isConnected),
+            returnValue: _i4.Future<bool>.value(false),
+            returnValueForMissingStub: _i4.Future<bool>.value(false),
+          )
+          as _i4.Future<bool>);
 }

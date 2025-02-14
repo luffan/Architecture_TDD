@@ -29,7 +29,7 @@ import 'package:mockito/mockito.dart' as _i1;
 
 class _FakeEither_0<L, R> extends _i1.SmartFake implements _i2.Either<L, R> {
   _FakeEither_0(Object parent, Invocation parentInvocation)
-      : super(parent, parentInvocation);
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [NumberTriviaRepository].
@@ -42,40 +42,43 @@ class MockNumberTriviaRepository extends _i1.Mock
     int? number,
   ) =>
       (super.noSuchMethod(
-        Invocation.method(#getConcreteNumberTrivia, [number]),
-        returnValue:
-            _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>.value(
-          _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
-            this,
             Invocation.method(#getConcreteNumberTrivia, [number]),
-          ),
-        ),
-        returnValueForMissingStub:
-            _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>.value(
-          _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
-            this,
-            Invocation.method(#getConcreteNumberTrivia, [number]),
-          ),
-        ),
-      ) as _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>);
+            returnValue:
+                _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>.value(
+                  _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
+                    this,
+                    Invocation.method(#getConcreteNumberTrivia, [number]),
+                  ),
+                ),
+            returnValueForMissingStub:
+                _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>.value(
+                  _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
+                    this,
+                    Invocation.method(#getConcreteNumberTrivia, [number]),
+                  ),
+                ),
+          )
+          as _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>);
 
   @override
   _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>
-      getRandomNumberTrivia() => (super.noSuchMethod(
+  getRandomNumberTrivia() =>
+      (super.noSuchMethod(
             Invocation.method(#getRandomNumberTrivia, []),
             returnValue:
                 _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>.value(
-              _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
-                this,
-                Invocation.method(#getRandomNumberTrivia, []),
-              ),
-            ),
+                  _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
+                    this,
+                    Invocation.method(#getRandomNumberTrivia, []),
+                  ),
+                ),
             returnValueForMissingStub:
                 _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>.value(
-              _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
-                this,
-                Invocation.method(#getRandomNumberTrivia, []),
-              ),
-            ),
-          ) as _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>);
+                  _FakeEither_0<_i5.Failure, _i6.NumberTrivia>(
+                    this,
+                    Invocation.method(#getRandomNumberTrivia, []),
+                  ),
+                ),
+          )
+          as _i4.Future<_i2.Either<_i5.Failure, _i6.NumberTrivia>>);
 }
