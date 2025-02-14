@@ -20,7 +20,7 @@ void main() {
   setUp(
     () {
       mockDio = MockDio();
-      mockDio.options = DIO_CLIENT_OPTIONS;
+      mockDio.options = dioClientOptions;
       dataSource = NumberTriviaRemoteDataSourceImpl(mockDio);
     },
   );

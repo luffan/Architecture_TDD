@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-final DIO_CLIENT_OPTIONS = BaseOptions(
+final dioClientOptions = BaseOptions(
   baseUrl: 'http://numbersapi.com',
   connectTimeout: const Duration(seconds: 5),
   receiveTimeout: const Duration(seconds: 5),

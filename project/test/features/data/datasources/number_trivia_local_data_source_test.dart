@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:architecture_tdd/core/error/exceptions.dart';
 import 'package:architecture_tdd/features/number_trivia/data/data_sources/constants/local_source_constants.dart';
-import 'package:architecture_tdd/features/number_trivia/data/data_sources/interfaces/number_trivia_local_data_source.dart';
 import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_local_data_source_impl.dart';
 import 'package:architecture_tdd/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -39,7 +38,7 @@ void main() {
 
           final result = await dataSource.getLastNumberTrivia();
 
-          verify(mockSharedPreferences.getString(CACHED_NUMBER_TRIVIA));
+          verify(mockSharedPreferences.getString(cachedNumberTrivia));
           expect(result, equals(tNumberTriviaModel));
         },
       );
@@ -73,7 +72,7 @@ void main() {
 
           verify(
             mockSharedPreferences.setString(
-              CACHED_NUMBER_TRIVIA,
+              cachedNumberTrivia,
               expectedJsonString,
             ),
           );

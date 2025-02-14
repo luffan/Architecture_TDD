@@ -1,1 +1,1 @@
-const CACHED_NUMBER_TRIVIA = 'CACHED_NUMBER_TRIVIA';
+const cachedNumberTrivia = 'CACHED_NUMBER_TRIVIA';
