@@ -1,6 +1,6 @@
 import 'package:architecture_tdd/core/error/exeptions.dart';
 import 'package:architecture_tdd/core/error/failures.dart';
-import 'package:architecture_tdd/core/platform/network_info.dart';
+import 'package:architecture_tdd/core/network/network_info.dart';
 import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_local_data_source.dart';
 import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_remote_data_source.dart';
 import 'package:architecture_tdd/features/number_trivia/data/models/number_trivia_model.dart';
@@ -18,6 +18,7 @@ import './number_trivia_repository_impl_test.mocks.dart';
   MockSpec<NumberTriviaLocalDataSource>(),
   MockSpec<NetworkInfo>(),
 ])
+
 void main() {
   late NumberTriviaRepositoryImpl repository;
   late MockNumberTriviaRemoteDataSource mockRemoteDataSource;
