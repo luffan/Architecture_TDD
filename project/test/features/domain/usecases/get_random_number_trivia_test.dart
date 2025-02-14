@@ -8,7 +8,6 @@ import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 @GenerateNiceMocks([MockSpec<NumberTriviaRepository>()])
-
 import './get_concrete_number_trivia_test.mocks.dart';
 
 void main() {
@@ -24,7 +23,7 @@ void main() {
 
   test(
     'should get trivia from the repository',
-        () async {
+    () async {
       when(mockNumberTriviaRepository.getRandomNumberTrivia())
           .thenAnswer((_) async => Right(tNumberTrivia));
 

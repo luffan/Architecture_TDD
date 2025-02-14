@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:architecture_tdd/core/error/exeptions.dart';
-import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_local_data_source.dart';
-import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_remote_data_source.dart';
+import 'package:architecture_tdd/core/error/exceptions.dart';
+import 'package:architecture_tdd/features/number_trivia/data/data_sources/constants/remote_source_constants.dart';
+import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_remote_data_source_impl.dart';
 import 'package:architecture_tdd/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -20,7 +20,7 @@ void main() {
   setUp(
     () {
       mockDio = MockDio();
-      mockDio.options = DIO_OPTIONS;
+      mockDio.options = DIO_CLIENT_OPTIONS;
       dataSource = NumberTriviaRemoteDataSourceImpl(mockDio);
     },
   );
@@ -95,7 +95,6 @@ void main() {
   group(
     'getRandomNumberTrivia',
     () {
-      final tNumber = 1;
       final tNumberTriviaModel = NumberTriviaModel.fromJson(
         json.decode(fixture('trivia.json')),
       );

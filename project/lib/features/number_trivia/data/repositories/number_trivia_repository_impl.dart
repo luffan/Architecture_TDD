@@ -1,8 +1,8 @@
-import 'package:architecture_tdd/core/error/exeptions.dart';
+import 'package:architecture_tdd/core/error/exceptions.dart';
 import 'package:architecture_tdd/core/error/failures.dart';
-import 'package:architecture_tdd/core/network/network_info.dart';
-import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_local_data_source.dart';
-import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_remote_data_source.dart';
+import 'package:architecture_tdd/core/network/interfaces/network_info.dart';
+import 'package:architecture_tdd/features/number_trivia/data/data_sources/interfaces/number_trivia_local_data_source.dart';
+import 'package:architecture_tdd/features/number_trivia/data/data_sources/interfaces/number_trivia_remote_data_source.dart';
 import 'package:architecture_tdd/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:architecture_tdd/features/number_trivia/domain/entity/number_trivia.dart';
 import 'package:architecture_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart';

@@ -1,8 +1,8 @@
-import 'package:architecture_tdd/core/error/exeptions.dart';
+import 'package:architecture_tdd/core/error/exceptions.dart';
 import 'package:architecture_tdd/core/error/failures.dart';
-import 'package:architecture_tdd/core/network/network_info.dart';
-import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_local_data_source.dart';
-import 'package:architecture_tdd/features/number_trivia/data/data_sources/number_trivia_remote_data_source.dart';
+import 'package:architecture_tdd/core/network/interfaces/network_info.dart';
+import 'package:architecture_tdd/features/number_trivia/data/data_sources/interfaces/number_trivia_local_data_source.dart';
+import 'package:architecture_tdd/features/number_trivia/data/data_sources/interfaces/number_trivia_remote_data_source.dart';
 import 'package:architecture_tdd/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:architecture_tdd/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
 import 'package:architecture_tdd/features/number_trivia/domain/entity/number_trivia.dart';
@@ -18,7 +18,6 @@ import './number_trivia_repository_impl_test.mocks.dart';
   MockSpec<NumberTriviaLocalDataSource>(),
   MockSpec<NetworkInfo>(),
 ])
-
 void main() {
   late NumberTriviaRepositoryImpl repository;
   late MockNumberTriviaRemoteDataSource mockRemoteDataSource;
@@ -153,7 +152,7 @@ void main() {
 
   group(
     'getRandomNumberTrivia',
-        () {
+    () {
       final tNumberTriviaModel = NumberTriviaModel(
         number: 132,
         text: 'Test trivia',
@@ -163,7 +162,7 @@ void main() {
 
       test(
         'should check if the device online',
-            () async {
+        () async {
           when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
 
           repository.getRandomNumberTrivia();
@@ -175,7 +174,7 @@ void main() {
       runTestsOnline(() {
         test(
           'should return remote data when the call to remote data source is successful',
-              () async {
+          () async {
             when(mockRemoteDataSource.getRandomNumberTrivia())
                 .thenAnswer((_) async => tNumberTriviaModel);
 
@@ -188,7 +187,7 @@ void main() {
 
         test(
           'should cache the data locally when the call to remote data source is successful',
-              () async {
+          () async {
             when(mockRemoteDataSource.getRandomNumberTrivia())
                 .thenAnswer((_) async => tNumberTriviaModel);
 
@@ -201,7 +200,7 @@ void main() {
 
         test(
           'should return server failure when the call to remote data source is unsuccessful',
-              () async {
+          () async {
             when(mockRemoteDataSource.getRandomNumberTrivia())
                 .thenThrow(ServerException());
 
@@ -217,7 +216,7 @@ void main() {
       runTestsOffline(() {
         test(
           'should return last locally cached data when the cached data is present',
-              () async {
+          () async {
             when(mockLocalDataSource.getLastNumberTrivia())
                 .thenAnswer((_) async => tNumberTriviaModel);
 
@@ -231,7 +230,7 @@ void main() {
 
         test(
           'should return CacheFailure cached data when there is cached data present',
-              () async {
+          () async {
             when(mockLocalDataSource.getLastNumberTrivia())
                 .thenThrow(CacheException());
 
