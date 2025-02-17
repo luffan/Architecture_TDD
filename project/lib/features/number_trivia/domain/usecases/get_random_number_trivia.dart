@@ -5,7 +5,7 @@ import 'package:architecture_tdd/features/number_trivia/domain/repositories/numb
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 
-@Singleton()
+@LazySingleton()
 class GetRandomNumberTrivia implements UseCase<NumberTrivia, NoParams> {
   final NumberTriviaRepository repository;
 

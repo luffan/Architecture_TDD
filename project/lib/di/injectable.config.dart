@@ -55,7 +55,6 @@ extension GetItInjectableX on _i174.GetIt {
     final remoteSourceProvider = _$RemoteSourceProvider();
     final localSourceModule = _$LocalSourceModule();
     final connectivitySourceModule = _$ConnectivitySourceModule();
-    gh.singleton<_i664.InputConverter>(() => _i664.InputConverter());
     gh.singleton<_i361.Dio>(() => remoteSourceProvider.dio());
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => localSourceModule.prefs,
@@ -63,21 +62,22 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.singleton<_i973.InternetConnectionChecker>(
         () => connectivitySourceModule.connectionChecker);
-    gh.singleton<_i365.NumberTriviaRemoteDataSource>(
+    gh.lazySingleton<_i664.InputConverter>(() => _i664.InputConverter());
+    gh.lazySingleton<_i365.NumberTriviaRemoteDataSource>(
         () => _i57.NumberTriviaRemoteDataSourceImpl(gh<_i361.Dio>()));
-    gh.singleton<_i491.NetworkInfo>(
+    gh.lazySingleton<_i491.NetworkInfo>(
         () => _i927.NetworkInfoImpl(gh<_i973.InternetConnectionChecker>()));
-    gh.singleton<_i633.NumberTriviaLocalDataSource>(() =>
+    gh.lazySingleton<_i633.NumberTriviaLocalDataSource>(() =>
         _i176.NumberTriviaLocalDataSourceImpl(gh<_i460.SharedPreferences>()));
-    gh.singleton<_i43.NumberTriviaRepository>(
+    gh.lazySingleton<_i43.NumberTriviaRepository>(
         () => _i41.NumberTriviaRepositoryImpl(
               remoteDataSource: gh<_i365.NumberTriviaRemoteDataSource>(),
               localDataSource: gh<_i633.NumberTriviaLocalDataSource>(),
               networkInfo: gh<_i491.NetworkInfo>(),
             ));
-    gh.singleton<_i145.GetRandomNumberTrivia>(
+    gh.lazySingleton<_i145.GetRandomNumberTrivia>(
         () => _i145.GetRandomNumberTrivia(gh<_i43.NumberTriviaRepository>()));
-    gh.singleton<_i71.GetConcreteNumberTrivia>(
+    gh.lazySingleton<_i71.GetConcreteNumberTrivia>(
         () => _i71.GetConcreteNumberTrivia(gh<_i43.NumberTriviaRepository>()));
     gh.factory<_i783.NumberTriviaBloc>(() => _i783.NumberTriviaBloc(
           concrete: gh<_i71.GetConcreteNumberTrivia>(),

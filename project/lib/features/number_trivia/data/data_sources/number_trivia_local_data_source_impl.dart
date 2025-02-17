@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'constants/local_source_constants.dart';
 import 'interfaces/number_trivia_local_data_source.dart';
 
-@Singleton(as: NumberTriviaLocalDataSource)
+@LazySingleton(as: NumberTriviaLocalDataSource)
 class NumberTriviaLocalDataSourceImpl implements NumberTriviaLocalDataSource {
   final SharedPreferences sharedPreferences;
 

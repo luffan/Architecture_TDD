@@ -11,7 +11,7 @@ import 'package:injectable/injectable.dart';
 
 typedef _ConcreteOrRandomChooser = Future<NumberTriviaModel> Function();
 
-@Singleton(as: NumberTriviaRepository)
+@LazySingleton(as: NumberTriviaRepository)
 class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
   final NumberTriviaRemoteDataSource remoteDataSource;
   final NumberTriviaLocalDataSource localDataSource;

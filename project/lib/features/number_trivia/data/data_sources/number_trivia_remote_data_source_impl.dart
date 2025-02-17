@@ -7,11 +7,11 @@ import 'package:injectable/injectable.dart';
 
 import 'interfaces/number_trivia_remote_data_source.dart';
 
-@Singleton(as: NumberTriviaRemoteDataSource)
+@LazySingleton(as: NumberTriviaRemoteDataSource)
 class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
   final Dio dio;
 
-  NumberTriviaRemoteDataSourceImpl(this.dio);
+  const NumberTriviaRemoteDataSourceImpl(this.dio);
 
   @override
   Future<NumberTriviaModel> getConcreteNumberTrivia(int number) async {
