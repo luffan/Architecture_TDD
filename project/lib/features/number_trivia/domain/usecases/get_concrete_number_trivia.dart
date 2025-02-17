@@ -4,7 +4,9 @@ import 'package:architecture_tdd/features/number_trivia/domain/entity/number_tri
 import 'package:architecture_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 
+@Singleton()
 class GetConcreteNumberTrivia implements UseCase<NumberTrivia, Params> {
   final NumberTriviaRepository repository;
 

@@ -7,9 +7,11 @@ import 'package:architecture_tdd/features/number_trivia/data/models/number_trivi
 import 'package:architecture_tdd/features/number_trivia/domain/entity/number_trivia.dart';
 import 'package:architecture_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 
 typedef _ConcreteOrRandomChooser = Future<NumberTriviaModel> Function();
 
+@Singleton(as: NumberTriviaRepository)
 class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
   final NumberTriviaRemoteDataSource remoteDataSource;
   final NumberTriviaLocalDataSource localDataSource;
