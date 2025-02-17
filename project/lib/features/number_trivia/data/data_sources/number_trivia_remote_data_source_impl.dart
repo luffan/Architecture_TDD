@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:architecture_tdd/core/error/exceptions.dart';
 import 'package:architecture_tdd/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:dio/dio.dart';
@@ -26,7 +24,8 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
   Future<NumberTriviaModel> _getTriviaFromUrl(String url) async {
     final response = await dio.get(url);
     if (response.statusCode == 200) {
-      return NumberTriviaModel.fromJson(json.decode(response.data));
+      final data = response.data;
+      return NumberTriviaModel.fromJson(data);
     } else {
       throw ServerException();
     }
